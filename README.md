@@ -9,8 +9,7 @@ The application enables businesses to manage customers, products, inventory, sto
 # Live Demo
 
 ## Frontend
-
-https://<your-vercel-project>.vercel.app
+https://<your-vercel-project>.vercel.app](https://erp-crm-portal-kappa.vercel.app
 
 ## Backend API
 
