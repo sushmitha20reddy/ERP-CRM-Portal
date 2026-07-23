@@ -15,12 +15,6 @@ https://<your-vercel-project>.vercel.app](https://erp-crm-portal-kappa.vercel.ap
 
 https://erp-crm-portal-8p2u.onrender.com
 
-## API Documentation (Swagger)
-
-https://erp-crm-portal-8p2u.onrender.com/api-docs
-
----
-
 # GitHub Repository
 
 https://github.com/sushmitha20reddy/ERP-CRM-Portal
