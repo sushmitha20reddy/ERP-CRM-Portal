@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://erp-crm-portal-8p2u.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
