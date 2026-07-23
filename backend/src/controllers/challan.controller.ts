@@ -53,7 +53,7 @@ export async function cancelChallanById(
   next: NextFunction
 ) {
   try {
-    const challan = await cancelChallan(req.params.id);
+    const challan = await cancelChallan(req.params.id as string);
 
     return res.status(200).json({
       success: true,
