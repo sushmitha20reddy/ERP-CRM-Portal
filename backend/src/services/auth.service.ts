@@ -36,25 +36,27 @@ export async function registerUser(data: {
   return user;
 }
 export async function loginUser(email: string, password: string) {
-  // Find user
   const user = await prisma.user.findUnique({
-    where: {
-      email,
-    },
+    where: { email },
   });
+
+  console.log("User:", user);
+  console.log("Entered Password:", password);
 
   if (!user) {
     throw new Error("Invalid email or password");
   }
 
-  // Compare password
+  console.log("Stored Password:", user.password);
+
   const passwordMatch = await bcrypt.compare(password, user.password);
+
+  console.log("Password Match:", passwordMatch);
 
   if (!passwordMatch) {
     throw new Error("Invalid email or password");
   }
 
-  // Generate JWT
   const token = jwt.sign(
     {
       id: user.id,
