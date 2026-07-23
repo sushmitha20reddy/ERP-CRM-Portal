@@ -3,7 +3,6 @@ import {
   Package,
   Boxes,
   IndianRupee,
-  TrendingUp,
 } from "lucide-react";
 import StatCard from "./StatCard";
 
