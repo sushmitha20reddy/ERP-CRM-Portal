@@ -1,5 +1,4 @@
 import { deleteCustomer } from "../../services/customer.service";
-import { useNavigate } from "react-router-dom";
 
 
 type Customer = {
@@ -26,7 +25,6 @@ function CustomerTable({
   onView,
 }: CustomerTableProps) {
 
-    const navigate = useNavigate();
 
   const handleDelete = async (id: string) => {
     const confirmDelete = window.confirm(
