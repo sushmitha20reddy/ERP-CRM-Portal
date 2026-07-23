@@ -21,17 +21,21 @@ export async function registerUser(data: {
   }
 
   // Hash password
-  const hashedPassword = await bcrypt.hash(data.password, 10);
+console.log("Incoming password:", data.password);
 
-  // Save user
-  const user = await prisma.user.create({
-    data: {
-      name: data.name,
-      email: data.email,
-      password: hashedPassword,
-      role: data.role,
-    },
-  });
+const hashedPassword = await bcrypt.hash(data.password, 10);
+
+console.log("Hashed password:", hashedPassword);
+console.log("Hash length:", hashedPassword.length);
+
+const user = await prisma.user.create({
+  data: {
+    name: data.name,
+    email: data.email,
+    password: hashedPassword,
+    role: data.role,
+  },
+});
 
   return user;
 }
