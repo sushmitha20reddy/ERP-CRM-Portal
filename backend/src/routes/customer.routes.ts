@@ -1,0 +1,48 @@
+import { Router } from "express";
+import {
+  addCustomer,
+  editCustomer,
+  getCustomers,
+  getCustomer,
+  removeCustomer,
+} from "../controllers/customer.controller.js";
+import { authenticateToken } from "../middleware/auth.middleware.js";
+import { authorizeRoles } from "../middleware/role.middleware.js";
+
+const router = Router();
+
+router.post(
+  "/",
+  authenticateToken,
+  authorizeRoles("ADMIN", "SALES"),
+  addCustomer
+);
+
+router.put(
+  "/:id",
+  authenticateToken,
+  authorizeRoles("ADMIN", "SALES"),
+  editCustomer
+);
+
+router.get(
+  "/",
+  authenticateToken,
+  authorizeRoles("ADMIN", "SALES", "WAREHOUSE", "ACCOUNTS"),
+  getCustomers
+);
+
+router.get(
+  "/:id",
+  authenticateToken,
+  authorizeRoles("ADMIN", "SALES", "WAREHOUSE", "ACCOUNTS"),
+  getCustomer
+);
+
+router.delete(
+  "/:id",
+  authenticateToken,
+  authorizeRoles("ADMIN"),
+  removeCustomer
+);
+export default router;
