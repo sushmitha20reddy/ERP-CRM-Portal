@@ -1,13 +1,8 @@
-import { Router } from "express";
-import { register, login } from "../controllers/auth.controller.js";
-
-const router = Router();
-
 /**
  * @swagger
- * /auth/login:
+ * /auth/register:
  *   post:
- *     summary: Login User
+ *     summary: Register User
  *     tags:
  *       - Authentication
  *     requestBody:
@@ -16,28 +11,25 @@ const router = Router();
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - name
+ *               - email
+ *               - password
+ *               - role
  *             properties:
+ *               name:
+ *                 type: string
+ *                 example: Sushmitha
  *               email:
  *                 type: string
+ *                 example: sushmitha@gmail.com
  *               password:
  *                 type: string
- *     responses:
- *       200:
- *         description: Login successful
- */
-router.post("/login", login);
-
-/**
- * @swagger
- * /auth/register:
- *   post:
- *     summary: Register User
- *     tags:
- *       - Authentication
+ *                 example: password123
+ *               role:
+ *                 type: string
+ *                 example: ADMIN
  *     responses:
  *       201:
  *         description: User registered successfully
  */
-router.post("/register", register);
-
-export default router;
