@@ -1,4 +1,10 @@
 # ERP CRM Portal
+![React](https://img.shields.io/badge/React-18-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-blue)
+![License](https://img.shields.io/badge/License-Educational-orange)
 
 A full-stack Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) web application built using React, Express, TypeScript, Prisma ORM, and PostgreSQL.
 
