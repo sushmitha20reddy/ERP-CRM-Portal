@@ -132,9 +132,9 @@ ERP-CRM-Portal/
 Create a `.env` file inside the backend directory.
 
 ```env
-DATABASE_URL=your_neon_database_url
+DATABASE_URL = postgresql://neondb_owner:npg_5cSjmsbKIdp2@ep-hidden-mouse-ayvdaq01-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 
-JWT_SECRET=your_secret_key
+JWT_SECRET = mySuperSecretKey123456
 ```
 
 ---
